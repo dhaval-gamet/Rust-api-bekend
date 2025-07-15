@@ -1,5 +1,5 @@
-# Official Rust image
-FROM rust:1.78 as builder
+# ✅ Use latest compatible Rust version (1.83)
+FROM rust:1.83 as builder
 
 WORKDIR /app
 COPY . .
