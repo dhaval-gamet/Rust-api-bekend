@@ -25,3 +25,4 @@ tower-http = { version = "0.5", features = ["cors"] }
 
 # For better routing, layers etc.
 tower = "0.4"
+hyper = "1.3"
