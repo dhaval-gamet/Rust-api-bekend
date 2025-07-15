@@ -9,6 +9,7 @@ use std::{env, net::SocketAddr, sync::Arc};
 use dotenvy::dotenv;
 use reqwest::Client;
 use serde_json::json;
+use hyper::Server; // ✅ axum v0.7 के लिए जरूरी
 
 #[derive(Clone)]
 struct AppState {
@@ -41,7 +42,8 @@ async fn main() {
 
     let addr = SocketAddr::from(([0, 0, 0, 0], 10000));
     println!("🧠 Rust Excel AI API running on {}", addr);
-    axum::Server::bind(&addr)
+
+    Server::bind(&addr)
         .serve(app.into_make_service())
         .await
         .unwrap();
