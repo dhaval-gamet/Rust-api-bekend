@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: xyz-rust
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
