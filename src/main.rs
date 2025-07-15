@@ -9,7 +9,7 @@ use std::{env, net::SocketAddr, sync::Arc};
 use dotenvy::dotenv;
 use reqwest::Client;
 use serde_json::json;
-use hyper::Server; // ✅ axum v0.7 के लिए जरूरी
+use hyper::server::Server;// ✅ axum v0.7 के लिए जरूरी
 
 #[derive(Clone)]
 struct AppState {
