@@ -1,0 +1,14 @@
+# compiled files
+/target/
+
+# environment files
+.env
+
+# backup and IDE files
+**/*.rs.bk
+*.swp
+.DS_Store
+
+# for Replit or mobile development
+replit.nix
+*.log
