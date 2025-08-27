@@ -1,6 +1,11 @@
 services:
   - type: web
-    name: xyz-rust
-    env: docker
+    name: groq-api-server-rust
+    env: rust
+    region: oregon # या मुंबई: asia-south1 (optional)
     plan: free
-    dockerfilePath: ./Dockerfile
+    buildCommand: "cargo build --release"
+    startCommand: "./target/release/groq-api-server"
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
